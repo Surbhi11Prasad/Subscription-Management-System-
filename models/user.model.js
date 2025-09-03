@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
       lowercase: true,
       validate(val) {
-        if (!validator.isEmail(value)) {
+        if (!validator.isEmail(val)) {
           throw new Error("Invalid Email Id");
         }
       },
